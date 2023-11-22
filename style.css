@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0; 
+}
+body {
+    background-color: #FFEECC;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+a {
+    text-decoration: none;
+    color: #8bb6fc;
+}
+a:visited {
+    text-decoration: none;
+}
+.marquee {
+    padding-top: 10px;
+    width: 100%;
+}
+/*---------------------------------------------headers and paragraphs*/
+h1 {/*used for reLove Apparel main title*/
+    padding-top: 20px;
+    padding-bottom: 1px;
+    font-size: 45px;
+    font-family: Didot;
+    color: #FEBBCC;
+}
+h2 {/*used for sets, individuals, lounge titles*/
+    color: #f7f1eb;
+    background-color: #FEBBCC;
+    font-family: Didot;
+}
+h3 {/**/
+    font-family: Didot;
+}
+h4 {/*used for contact, sizing guide, return policy*/
+    color:#FEBBCC;
+    font-family: Didot;
+}
+h5 {/*used for footer, home page description, and contact*/
+    color: #FEBBCC;
+    line-height: 1.5;
+    font-family: Didot;
+}
+p {
+    font-family: Didot;
+}
+/*--------------------------------------------------cart and wishlist*/
+.icons {
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 15px;     
+}
+/*------------------------------------------------------------nav bar*/
+.navbar { /*entire row, including home, nav, and cart*/
+    display: flex;
+    list-style: none;
+    font-size: 18px;
+    padding: 20px;
+  }
+  nav { /*just the navigation*/
+    flex: 1;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  nav ul { /*nav's unordered list*/
+    display: inline-block;
+    list-style-type: none;
+    padding: 0;
+  }
+  nav li{ /*nav's list elements*/
+    display: inline-block;
+  }
+  li a { /*individual links*/
+    display: block;
+    color: #faaae1;
+    text-align: center;
+    padding: 1px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Didot;
+  }
+  li a:hover {/*Change the link color to light blue on hover */
+    background-color: #edf2fcff;
+    color: #8bb6fc;
+  }
+/*----------------------------------------------------------home page*/
+.promo-wrapper {/*wrapper for entire grid on home page*/
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+.promo-vid-box {/*row for promo vid*/
+    grid-area: 1 / 1 / 2 / 2;
+}
+.promo-beneath-box {/*row for text and button*/
+    grid-area: 2 / 1 / 3 / 2;
+}
+.promo-vid {
+    width: 100%;
+    height: 200px;
+}
+.promo-beneath-pad {/*padding for beneath vid*/
+    padding-top: 40px;
+}
+.shop-now {
+    color: #8bb6fc;
+}
+.shop-button {
+    background-color: #FFCCCC;
+    border: none;
+    color: #f7f1eb;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    margin: auto;
+    border-radius: 8px;
+    font-family: Didot;
+    font-size: 15px;
+}
+.shop-button:hover {
+    background-color:#FEBBCC;
+}
+.button-border {
+    padding: 20px
+}
+/*-------------------------------------------------------------footer*/
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+#content-wrap {
+    padding-bottom: 12.5rem; /*footer height*/
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 12.5rem; /*footer height*/
+    background-color: #8bb6fc;
+    color: #f7f1eb;
+    text-align: center;
+    font-family: Didot;
+}
+.footer-padding {
+    display: grid;
+    place-items: center;
+    grid-row: 50px;
+    grid-template-columns: 33% 33% 33%; 
+    grid-template-rows: 1fr 1fr;        
+    row-gap: 10px;
+    padding: 50px 50px;
+}
+.contact{
+    grid-area: 1 / 1 / 2 / 2;
+}
+.email{
+    grid-area: 2 / 1 / 3 / 2;
+}
+.instagram{
+    grid-area: 3/1/4/2;
+}
+.sizing{
+    
+}
+.size-guide{
+    
+}
+.returns{
+    
+}
+.return-policy{
+    
+}
+.start-return{
+    
+}
+.footer-text{
+    font-size: 18px;
+}
+.footer-text:hover{
+    color: #f7f1eb;
+}
+/*------------------------------------------------------------contact*/
+.contact-outer-wrapper {
+    padding: 5px;
+}
+.contact-inner-wrapper {
+    padding: 20px;
+}
+.contact-i-w-2 {
+    background-color: #faaae1;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+/*Desktop View*/
+@media only screen and (min-width: 1024px) {
+/*--------------------------------------------------cart and wishlist*/
+    .wishlist {
+        height: 50px;
+        width: 50px;
+        padding: 3px;
+    }
+    .cart {
+        height: 50px;
+        width: 50px;
+        padding: 3px;
+    }
+    .icons {
+        padding-right: 25px;
+    }
+/*--------------------------------------------------------home screen*/
+    .title {
+        font-size: 80px;
+    }
+    .promo-vid{
+        width: 100%;
+        height: 500px;
+    }
+    .shop-button {
+        padding: 18px;
+        font-size: 24px;
+    }
+    .promo-text {
+        font-size: 30px;
+    }
+    .promo-beneath-pad {
+        padding-top: 130px;
+    } 
+/*------------------------------------------------------products grid*/
+    .sec-title {
+        font-size: 32px;
+        padding: 8px;
+    }
+    .products {
+        display: grid;
+        place-items: center;
+        grid-row: 100px;
+        grid-template-columns: 50% 50%; 
+        grid-template-rows: 1fr 1fr;
+        row-gap: 100px;
+        padding: 50px 50px;
+    }
+    .product1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        grid-area: 1 / 1 / 2 / 2;
+    }
+    .product2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    .product3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        grid-area: 2 / 1 / 3 / 2;
+    }
+    .product4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        grid-area: 2 / 2 / 3 / 4;
+    }
+    .product5 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    .product6 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        grid-area: 2 / 3 / 3 / 4;
+    }
+    figure {
+        font-family: Didot;
+        color: #8bb6fc;
+        font-size: 20px;
+    }
+    .content {
+        padding: 25px 10px;
+    }
+    .product-img {
+        height: 550px;
+        width: 450px;
+    }
+}
+/*-----------------------------------------------------product images*/
+.row {
+    display: flex;
+}
+.column {
+    flex: 50%;
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-bottom: 8px;
+    padding-top: 50px;
+}
+.product-container {
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-bottom: 150px;
+}
+.add-to-bag-button {
+    background-color: #8bb6fc;
+    border: none;
+    color: #f7f1eb;
+    padding: 12px;
+    text-decoration: none;
+    display: flex;
+    position: absolute;
+    font-size: 16px;
+    margin: auto;
+    border-radius: 8px;
+    font-family: Didot;
+    font-size: 15px;
+}
+.add-to-bag-button:hover{
+    background-color: #73a6fa;
+}
+.form{
+    font-family: Didot;
+    font-size: 18px;
+    color: #665e59;
+}
+input{
+    width: 300px;
+    height: 25px;
+    font-family: Didot;
+    background-color: #faaae1;
+    border-radius: 0px;
+    border: white;
+}
+.submit-order-button{
+    background-color: #faaae1;
+    border: none;
+    color: #f7f1eb;
+    padding: 12px;
+    text-decoration: none;
+    display: flex;
+    position: absolute;
+    font-size: 16px;
+    margin: auto;
+    border-radius: 8px;
+    font-family: Didot;
+    font-size: 15px;   
+}
+
+.return-text{
+    
+}
