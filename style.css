@@ -19,14 +19,9 @@ a:visited {
 .marquee {
     padding-top: 10px;
     width: 100%;
+    color: #FEBBCC;
 }
 /*---------------------------------------------headers and paragraphs*/
-h1 {
-    padding-top: 20px;
-    padding-bottom: 1px;
-    font-size: 80px;
-    font-family: Didot;
-}
 h2 {
     font-family: Didot;
 }
@@ -35,11 +30,15 @@ h5 {
 }
 p {
     font-family: Didot;
-    padding: 10px;
 }
 /*------------------------------------------------------------nav bar*/
 .title {
-    color:#FEBBCC
+    text-align: center;
+    align-items: center;
+    color:#FEBBCC;
+    font-size: 80px;
+    font-family: Didot;
+    padding-top: 30px;
 }
 .title:hover{
     color: #faa0b7;
@@ -81,7 +80,7 @@ li a:hover {
     position: relative;
     min-height: 100vh;
 }
-.home-wrapper {/*wrapper for entire grid on home page*/
+.home-grid {/*grid for entire home page*/
     display: grid;
     grid-template-rows: 1fr 1fr 40px;
     grid-template-columns: 1fr;
@@ -89,19 +88,20 @@ li a:hover {
 .promo-vid-box {/*row for promo vid*/
     grid-area: 1 / 1 / 2 / 2;
 }
-.promo-vid {
+.promo-vid {/*video itself*/
     width: 100%;
     height: 500px;
 }
-.promo-text-box {/*row for text and button*/
+.promo-text-row {/*row for text and button*/
     grid-area: 2 / 1 / 3 / 2;
 }
-.promo-text {
+.promo-text {/*text itself*/
     font-size: 30px;
     line-height: 50px;
+    color: #FEBBCC;
 }
-.promo-beneath-pad {/*padding for beneath vid*/
-    padding-top: 130px;
+.promo-text-content {/*text and button themselves*/
+    padding-top: 140px;
 }
 .shop-button {
     background-color: #FEBBCC;
@@ -109,7 +109,6 @@ li a:hover {
     color: white;
     padding: 18px;
     text-align: center;
-    text-decoration: none;
     display: flex;
     margin: auto;
     border-radius: 8px;
@@ -124,7 +123,6 @@ li a:hover {
 }
 /*-------------------------------------------------------------footer*/
 .footer-grid {
-    grid-area: 3 / 1 / 4 / 2;
     display: grid;
     row-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
@@ -188,8 +186,14 @@ li a:hover {
 .a, .b, .c, .d, .e, .g, .h, .i {
     text-align: center; 
 }
+.footer-grid {
+    cursor: pointer;
+}
 /*--------------------------------------------------all products grid*/
-.products {
+.prods-grid-padding {/*padding around the entire grid*/
+    padding: 25px 10px;
+}
+.prods-grid {/*includes the title*/
     display: grid;
     place-items: center;
     grid-template-columns: 50% 50%; 
@@ -197,44 +201,30 @@ li a:hover {
     row-gap: 100px;
     padding: 50px 50px;
 }
-.sec-title {
+.sec-title-row {/*row for section title*/
     grid-area: 1 / 1 / 2 / 3;    
     color: #faa0b7;
     background-color: #FFDDCC;
-    width: 100%;
-    padding: 50px 60px 60px;
-    text-align: center;
-    font-size: 24px;
+    display: flex;/*like css grid, but flex*/
+    align-items: center;/*aligns vertically*/
+    justify-content: center;/*aligns horizontally*/
+    width: 140%;
+    height: 130px;
 }
-.product1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.sec-title {
+    font-size: 27px;
+}
+.sec-title-content {/*title and subtitle themselves*/
     text-align: center;
+    line-height: 34px;
+}
+.prod-1 {
     grid-area: 2 / 1 / 3 / 2;
 }
-.product2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    grid-area: 2 / 2 / 3 / 3;
-}
-.product3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    grid-area: 3 / 1 / 4 / 2;
-}
-.product4 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.prod-2 {
     grid-area: 3 / 2 / 4 / 3;
 }
-.product-img {
+.prod-img {
     height: 500px;
     width: 400px;
 }
@@ -242,112 +232,162 @@ figure {
     font-family: Didot;
     color: #faa0b7;
     font-size: 20px;
+    text-align: center;
 }
-.products-wrapper {
-    padding: 25px 10px;
+/*--------------------------------------------------------back button*/
+.back-button {
+    padding-left: 80px;
+    padding-bottom: 20px;
+    font-family: Didot;
+    font-size: 20px;
+    color: #FEBBCC;
+    border: none;
+    background: none;
+}
+.back-button:hover {
+    color: #faa0b7;
 }
 /*-------------------------------------------------individual product*/
-.indi-product-grid {
+.indi-prod-grid {
     row-gap: 50px;
     display: grid;
     place-items: center;
     grid-template-columns: 50% 50%; 
     padding-bottom: 100px;
 }
-.productDescriptionBlock {
+.prod-details-block { /*entire pink block*/
     background-color: #FFCCCC;
     grid-area: 1 / 2 / 2 / 3;
 }
-.productDescriptionText {
+.prod-details-text {
     height: 574px;
     width: 450px;
     padding: 30px 30px 0px 30px;
     color: #665e59;
 }
-.price {
-    padding: 12px;
+.prod-name {
+    font-size: 26px;
 }
-.backButton {
-    grid-area: 2 / 2 / 3 / 3;
-} 
-.productImage1 {
+.prod-description {
+    line-height: 25px;
+}
+.prod-image-1 {
     grid-area: 1 / 1 / 2 / 2;
 }
-.productImage2 {
+.prod-image-2 {
     grid-area: 2 / 1 / 3 / 2;
 }
-.productImage3 {
+.prod-image-3 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+.prod-image-4 {
     grid-area: 3 / 1 / 4 / 2;
 }
-.productImage {
+.prod-image-5 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+.prod-image-6 {
+    grid-area: 4 / 1 / 5 / 2;
+}
+.prod-image {
     height: 600px;
     width: 480px;
 }
-.stripe-mobile {
-    grid-area: 2 / 2 / 3 / 3;
-    display: none;
+.links {
+    text-decoration: underline;
 }
-.stripe-desktop {
-    place-items: center;
+/*---------------------------------------------------------size guide*/
+.size-guide {
+    grid-area: 3 / 1 / 4 / 3;
+    height: 320px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
 }
-@media screen and (max-device-width: 480px) and (orientation:portrait) {
-    h1 {
-        padding-top: 20px;
-        padding-bottom: 1px;
-        font-size: 50px;
-        font-family: Didot;
+.size-guide-image {
+    height: 280px;
+    width: 780px;
+}
+.size-guide-row {
+    padding: 30px 0px;
+    color: #faa0b7;
+    background-color: #FFDDCC;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    grid-area: 1 / 1 / 2 / 3;
+}
+.size-guide-grid {
+    display: grid;
+    row-gap: 20px;
+}
+.size-guide-back-button {
+    font-family: Didot;
+    font-size: 20px;
+    color: #FEBBCC;
+    border: none;
+    background: none;
+    grid-area: 2 / 1 / 3 / 2;
+}
+.size-guide-back-button:hover{
+    color: #faa0b7;
+}
+/*------------------------------------------------------return policy*/
+.return-policy {
+    grid-area: 3 / 1 / 4 / 3;
+    text-align: center;
+    height: 150px;
+}
+.return-policy-text {
+    font-family: Didot;
+    color: #665e59;
+    text-align: left;
+    line-height: 25px;
+    display: inline-block;
+}
+/*------------------------------------------------------media queries*/
+@media only screen and (min-device-width: 992px){ /*laptops, bigger than 992px*/
+    .stripe-mobile {
+        display: none;
     }
-    h2 {
-        font-family: Didot;
+    .stripe-desktop {
+        padding-top: 22px;
     }
-    h3 {
-        font-family: Didot;
+    .subtitle-mobile {
+        display: none;
     }
-    h4 {
-        font-family: Didot;
-    }
-    h5 {
-        font-family: Didot;
+}
+@media screen and (max-device-width: 600px) and (orientation:portrait) {/*iphone 12, smaller than 600*/
+    .title {
+        font-size: 45px;
     }
     p {
         font-family: Didot;
         padding: 10px;
     }
 /*----------------------------------------------------------home page*/
-    .home-wrapper {/*wrapper for entire grid on home page*/
-        display: grid;
-        grid-template-rows: 1fr 235px;
-        grid-template-columns: 1fr;
-    }
-    .promo-vid {
-        width: 100%;
+    .promo-vid {/*video itself*/
         height: 300px;
     }
-    .promo-text {
-        font-size: 20px;
-        line-height: 24px;
+    .promo-text {/*text itself*/
+        font-size: 22px;
+        line-height: 30px;
+        padding: 20px;
     }
-    .promo-beneath-pad {/*padding for beneath vid*/
-        padding: 30px;
+    .promo-text-content {/*text and button themselves*/
+        padding-top: 50px;
+    }
+    .shop-button {
+        padding: 12px;
+        font-size: 15px;
+    }
+    .button-outer-padding {
+        padding: 15px;
     }
 /*-------------------------------------------------------------footer*/
-    #footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 10rem; /*footer height*/
-        background-color: #FFDDCC;
-        text-align: center;
-    }
     .footer-grid {
-        display: grid;
         row-gap: 8px;
-        grid-template-columns: 33% 33% 33%;
         grid-template-rows: 12px 12px 12px;
-        background-color: #FFDDCC;
-        font-family: Didot;
-        color: #faa0b7;
-        justify-content: center;
         font-size: 14px;
     }
     .break {
@@ -378,125 +418,148 @@ figure {
         text-align: center;
     }
 /*--------------------------------------------------all products grid*/
-    .lingerieTitle {
-        font-size: 16px;
+    .prods-grid {/*includes the title*/
+        row-gap: 40px;
+        padding: 10px 20px;
+        grid-template-rows: 20px 300px 300px;
     }
-    .dressesTitle {
-        font-size: 16px;
-    }
-    .galleryTitle {
-        font-size: 16px;
-    }
-    .products {
-        display: grid;
-        place-items: center;
-        grid-template-columns: 50% 50%; 
-        grid-template-rows: 150px 250px 250px;
-        row-gap: 10px;
-        padding: 0px;
-    }
-    .sec-title {
-        grid-area: 1 / 1 / 2 / 3;    
-        color: #faa0b7;
-        background-color: #FFDDCC;
-        width: 100%;
-        text-align: center;
-        height: 60px;
-        padding: 30px 30px 40px 30px;
+    .sec-title-row {/*row for section title*/
+        width: 150%;
+        height: 100px;
         font-size: 14px;
     }
-    .product1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        grid-area: 2 / 1 / 3 / 2;
+    .sec-title {
+        font-size: 22px;
+        padding-top: 5px;
     }
-    .product2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        grid-area: 2 / 2 / 3 / 3;
+    .subtitle-desktop {
+        display: none;
     }
-    .product3 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        grid-area: 3 / 1 / 4 / 2;
+    .subtitle-mobile {
+        font-size: 12px;
+        line-height: 16px;
     }
-    .product4 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        grid-area: 3 / 2 / 4 / 3;
+    .sec-title-content {/*title and subtitle themselves*/
+        line-height: 18px;
     }
-    .product-img {
+    .prod-img {
         height: 150px;
         width: 120px;
     }
-    figure {
-        font-family: Didot;
-        color: #faa0b7;
-        font-size: 16px;
-    }
-    .products-wrapper {
-        padding: 0px 0px;
+    .figure {
+        font-size: 11px;/*why not working*/
     }
 /*-------------------------------------------------individual product*/
-    .indi-product-grid {
+    .back-button {
+        padding-left: 25px;
+        font-size: 18px;
+        border: none;
+    }
+    .indi-prod-grid {
         row-gap: 20px;
         display: grid;
         place-items: center;
         grid-template-columns: 50% 50%; 
         padding-bottom: 50px;
     }
-    .productDescriptionBlock {
+    .prod-details-block {
         grid-area: 1 / 2 / 4 / 3;
         background-color: #FFEECC;
+        padding-bottom: 20px;
     }
-    .productDescriptionText {
+    .prod-details-text {
         height: 470px;
-        width: 170px;
+        width: 190px;
         font-size: 16px;
     }
-    .productName {
+    .prod-name {
         color: #665e59;
         font-size: 22px;
     }
-    .productDescription {
+    .prod-description {
         color: #665e59;
+        line-height: 19px;
     }
-    .price {
-        color: #665e59;
-        padding: 12px;
-    }
-    .backButton {
-        grid-area: 5 / 1 / 6 / 3;
-    } 
-    .productImage1 {
+    .prod-image-1 {
         grid-area: 1 / 1 / 2 / 2;
     }
-    .productImage2 {
+    .prod-image-2 {
         grid-area: 2 / 1 / 3 / 2;
     }
-    .productImage3 {
+    .prod-image-3 {
         grid-area: 3 / 1 / 4 / 2;
     }
-    .productImage {
+    .prod-image-4 {
+        grid-area: 4 / 1 / 5 / 2;
+    }
+    .prod-image-5 {
+        display: none;
+    }
+    .prod-image-6 {
+        grid-area: 4 / 2 / 5 / 3;
+    }
+    .prod-image {
         height: 150px;
         width: 120px;
-    }
-    .stripe-mobile {
-        grid-area: 4 / 1 / 5 / 3;
-        padding: 30px;
     }
     .stripe-desktop {
         display: none;
     }
+    .stripe-mobile {
+        grid-area: 5 / 1 / 6 / 3;
+        padding-top: 30px;
+    }
+/*---------------------------------------------------------size guide*/
+    .size-guide {/*size guide block, not image*/
+        height: 300px;
+    }
+    .size-guide-image {
+        height: 120px;
+        width: 350px;
+    }
+    .size-guide-row {/*row for the title*/
+        font-size: 14px;
+    }
+    .size-guide-back-button {
+        font-size: 18px;
+        padding-left: 12px;
+    }
+/*------------------------------------------------------return policy*/
+    .return-policy {
+        grid-area: 3 / 1 / 4 / 3;
+        text-align: center;
+        height: 300px;
+    }
+    .return-policy-text {
+        line-height: 20px;
+        padding: 24px;
+    }
 } 
-@media only screen and (min-width: 768px) {
-
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio : 3){
+    .navbar { /*entire row*/
+        display: flex;
+        list-style: none;
+        font-size: 18px;
+        padding: 30px;
+    }
+    nav { /*just the navigation*/
+        flex: 1;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    nav ul { /*nav's unordered list*/
+        display: inline-block;
+        list-style-type: none;
+        padding: 0;
+    }
+    nav li{ /*nav's list elements*/
+        display: inline-block;
+    }
+    li a { /*individual links*/
+        font-size: 18px;
+    }
+    li a:hover {
+        background-color: #FFDDCC;
+        color: white;
+    }
 }
