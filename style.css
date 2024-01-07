@@ -378,7 +378,8 @@ figure {
         padding: 20px;
     }
     .promo-text-content {/*text and button themselves*/
-        padding-top: 50px;
+        padding-top: 5px;
+        padding-bottom: 25px;
     }
     .shop-button {
         padding: 12px;
