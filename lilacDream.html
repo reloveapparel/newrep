@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>reLove Apparel</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="script.js"></script>
     </head>
     <body>
 <!-----------------------------------------------------------marquee-->
@@ -21,7 +20,7 @@
             </marquee>
         </div>
 <!------------------------------------------------------reLove title-->
-        <center><h1 class="title"><a href="index.html">reLove Apparel</a></h1></center>
+<center><h1 class="title"><a href="index.html">reLove Apparel</a></h1></center>
 <!-----------------------------------------------------------nav bar-->
         <div class ="navbar">
             <nav>
@@ -32,48 +31,27 @@
                 </ul>
             </nav>
         </div>
-<!-------------------------------------------------------back button-->
-        <button onclick="history.back()" class="back-button">←Back</button>
-<!------------------------------------------------------indi product-->
-        <div class="indi-prod-grid">
-            <div class="prod-details-block">
-                <div class="prod-details-text">
-                    <h2 class="prod-name">"Lilac Dream" Cocktail Dress</h2>
-                    <p class="prod-description">The perfect cocktail dress for a night out or 
-                        for that special date. You'll glisten and shine wearing the reLove Lilac 
-                        Dream Cocktail Dress. This piece was constructed by hand—down to every 
-                        rhinestone and stitch. <br> ∙ wash by hand and air dry for best maintainance of rhinestones
-                         and tulle flowers <br> ∙ press flounces occasionally <br> ∙ size s shown in image <br> ∙ check out
-                          <a href="sizeGuide.html" class="links">size guide</a> and <a href="returnPolicy.html" class="links">
-                        return policy</a> before purchasing</p>
-                    <br>
-                    <center><div class="stripe-desktop">
-                        <script async
-                        src="https://js.stripe.com/v3/buy-button.js">
-                        </script>
-
-                        <stripe-buy-button
-                        buy-button-id="buy_btn_1PCAwIBtTIiSlLzCcCIAtjYp"
-                        publishable-key="pk_live_51OC5dIBtTIiSlLzCqfKSVWYeosBF76Not1nQnIJafTkgBBucnYg72qt3sbtmDNY0NsWwKajxeR2yHdYJQuwVKgrw00wGTKurSh"
-                        ></stripe-buy-button>
-                    </div></center>
+<!-----------------------------------------------------products grid-->
+        <div class="prods-grid-padding">
+            <div class="prods-grid">
+                <div class="sec-title-row">
+                    <div class="sec-title-content">
+                        <h2><div class="sec-title">⟡ lingerie ⟡</div></h2>
+                        <p class="subtitle-desktop">handmade, carefully crafted, and designed to allow you to 
+                            embrace all your beauty, inside and out</p>
+                        <p class="subtitle-mobile">handmade, carefully crafted, and designed <br> to allow you to 
+                            embrace all that beauty</p>
+                    </div>
                 </div>
-            </div>
-            <div class="prod-image-1"><img src="images/dress1-1.jpg" class="prod-image"></div>
-            <div class="prod-image-2"><img src="images/dress1-2.jpg" class="prod-image"></div>
-            <div class="prod-image-3"><img src="images/dress1-3.jpg" class="prod-image"></div>
-            <div class="prod-image-4"><img src="images/dress1-4.jpg" class="prod-image"></div>
-            <div class="prod-image-5"><img src="images/dress1-5.jpg" class="prod-image"></div>
-            <div class="prod-image-6"><img src="images/dress1-6.jpg" class="prod-image"></div>
-            <div class="stripe-mobile">
-                <script async
-                src="https://js.stripe.com/v3/buy-button.js">
-                </script>
-
-                <stripe-buy-button
-                buy-button-id="buy_btn_1PCAwIBtTIiSlLzCcCIAtjYp"
-                publishable-key="pk_live_51OC5dIBtTIiSlLzCqfKSVWYeosBF76Not1nQnIJafTkgBBucnYg72qt3sbtmDNY0NsWwKajxeR2yHdYJQuwVKgrw00wGTKurSh"
-                ></stripe-buy-button>
+                <div class="prod-1">
+                    <a href="soInLoveSet.html"><figure><img src="images/set1-1.jpg" class="prod-img"><figcaption class="prod-fig">"So In Love" Lingerie Set<br>$85.00</figcaption></figure></a>
+                </div>
+                <div class="prod-2">
+                    <a href="soInLoveBra.html"><figure><img src="images/bra1-1.jpg" class="prod-img"><figcaption class="prod-fig">"So In Love" Lingerie Bra<br>$65.00</figcaption></figure></a>
+                </div>
+                <div class="prod-3">
+                    <a href="soInLovePanty.html"><figure><img src="images/panty1-1.jpg" class="prod-img"><figcaption class="prod-fig">"So In Love" Lingerie Panty<br>$25.00</figcaption></figure></a>
+                </div>
             </div>
         </div>
 <!------------------------------------------------------------footer-->
