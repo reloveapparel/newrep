@@ -458,8 +458,8 @@ figure {
         height: 150px;
         width: 120px;
     }
-    .figure {
-        font-size: 11px;/*why not working*/
+    .prod-fig {
+        font-size: 13px;/*why not working*/
     }
 /*-------------------------------------------------individual product*/
     .back-button {
