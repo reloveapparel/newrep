@@ -132,7 +132,7 @@ li a:hover {
     grid-template-rows: 18px 18px 18px;
     background-color: #fae3e9;
     font-family: Didot;
-    color: #776e68;
+    color: #665e59;
     padding: 20px 0px 50px 0px;
 }
 .a {
@@ -274,7 +274,7 @@ figure {
     height: 574px;
     width: 450px;
     padding: 30px 30px 0px 30px;
-    color: #776e68;
+    color: #665e59;
 }
 .prod-name {
     font-size: 26px;
@@ -551,7 +551,6 @@ figure {
     .navbar { /*entire row*/
         display: flex;
         list-style: none;
-        font-size: 18px;
         padding: 30px;
     }
     nav { /*just the navigation*/
@@ -568,7 +567,7 @@ figure {
         display: inline-block;
     }
     li a { /*individual links*/
-        font-size: 18px;
+        font-size: 25px;
     }
     li a:hover {
         color: #fa7395;
